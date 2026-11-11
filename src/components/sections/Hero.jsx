@@ -10,10 +10,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden scroll-mt-24"
+      className="relative min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24 scroll-mt-24"
+      style={{ overflow: 'clip' }}
     >
       {/* Background Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[450px] md:w-[650px] h-[300px] sm:h-[450px] md:h-[650px] bg-black/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[450px] md:w-[650px] h-[300px] sm:h-[450px] md:h-[650px] bg-black/5 rounded-full blur-[80px] pointer-events-none -z-10" />
 
       <div
         ref={ref}
