@@ -1,12 +1,13 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Student Performance Data Analysis",
+    title: "AI-Powered Data Analysis Assistant",
     description:
-      "Analyzed a student performance dataset using Python to identify key factors affecting academic results, including study time, attendance, and parental background. Delivered visual insights through charts built with Matplotlib and Seaborn.",
-    tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    github: "#", // Replace with your real GitHub repository URL
-    demo: "#", // Replace with your real live demo URL
+      "A next-generation data analysis web app that automates data cleaning, builds interactive visualizations (Bar, Line, Scatter, Heatmaps), and answers complex business questions using the Groq Llama-3.3 LLM AI chatbot. Upload any CSV and get deep insights instantly.",
+    tech: ["Python", "Streamlit", "Pandas", "Groq LLM", "Matplotlib", "Seaborn"],
+    image: "/src/assets/project-data-analysis.png",
+    github: "https://github.com/UzaimaAliBarioffical/hacathon-ai-data-analyst",
+    demo: "https://hackthon-ai-data-analysis.streamlit.app/",
   },
   {
     id: 2,

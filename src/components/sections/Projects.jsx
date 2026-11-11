@@ -28,9 +28,21 @@ export default function Projects() {
           {projectsData.map((project) => (
             <Card
               key={project.id}
-              className="flex flex-col justify-between h-full group p-6 sm:p-8 hover:bg-surface-hover"
+              className="flex flex-col justify-between h-full group p-0 hover:bg-surface-hover overflow-hidden"
             >
-              <div>
+              {/* Project Thumbnail */}
+              {project.image && (
+                <div className="relative w-full h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
+                </div>
+              )}
+
+              <div className={project.image ? "p-6 sm:p-8 flex flex-col flex-1" : "p-6 sm:p-8"}>
                 {/* Header Icon + Number */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 rounded-xl bg-black/5 border border-black/15 text-black group-hover:scale-105 transition-transform">
@@ -62,10 +74,9 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="pt-4 border-t border-border/60 flex items-center gap-3">
+                {/* Action Buttons */}
+                <div className="pt-4 mt-auto border-t border-border/60 flex items-center gap-3">
                 <Button
                   as="a"
                   href={project.github}
@@ -90,6 +101,7 @@ export default function Projects() {
                 >
                   Live Demo
                 </Button>
+                </div>
               </div>
             </Card>
           ))}
